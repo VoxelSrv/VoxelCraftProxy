@@ -62,7 +62,7 @@ mcData.blocksArray.forEach((block: any) => {
 delete blockRegistry['air'];
 
 const movement = {
-	airJumps: 999,
+	airJumps: 0,
 	airMoveMult: 0.5,
 	crouch: false,
 	crouchMoveMult: 0.8,
@@ -445,7 +445,7 @@ class Server extends EventEmitter {
 						x: id[0],
 						y: 0,
 						z: id[1],
-						type: true,
+						height: 8,
 						compressed: false,
 						data: Buffer.from(chunkStorage[idS].data.buffer),
 					};
